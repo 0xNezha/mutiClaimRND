@@ -14,5 +14,5 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
-项目源码 https://github.com/0xNezha/mutiClaimRND
+有关说明见：https://mirror.xyz/0x01aC3FF155739D34948f1af53f24524149c9d928/plbO7co90A6JhKSRSMsstrcP-X8CpfnaRs7k3HI3loY
 
