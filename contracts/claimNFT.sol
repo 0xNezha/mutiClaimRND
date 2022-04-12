@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0
-// 在之前批量 claim ERC20 Token 的基础上，将interface 改为了 REC721 ,可以实现批量 mint NFT 的合约
+
 pragma solidity ^0.8.4;
 
 interface airdrop {
@@ -19,9 +19,7 @@ contract multiCall{
 contract claimer{
     constructor(address contra){
         airdrop(contra).mint();
-        //uint256 balance = airdrop(contra).balanceOf(address(this));
         uint256 id = airdrop(contra).tokenOfOwnerByIndex(address(this),0);
-
         airdrop(contra).transferFrom(address(this),msg.sender,id);
         selfdestruct(payable(address(msg.sender)));
     }
